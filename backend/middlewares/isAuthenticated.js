@@ -23,6 +23,10 @@ const isAuthenticated = async(req,res,next) => {
     }catch(err){
         console.log(err);
     }
+
 }
+
+cons
+
 
 export default isAuthenticated;
