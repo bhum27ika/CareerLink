@@ -102,7 +102,7 @@ export const login = async(req,res) => {
 export const logout = async(req,res) => {
     try{
         return res.status(200).cookie("token", "", {maxAge: 0}).json({
-            message: "Logged out successfully",
+            message: "Logged out successfully!",
             success: true
         })
     }catch(err){
@@ -122,7 +122,7 @@ export const updateProfile = async (req,res) => {
          let user = await User.findById(userId);
             if(!user){
                 return res.status(400).json({
-                    message: "User not found",
+                    message: "User not found or unauthorized",
                     success: false
                 })
             }
